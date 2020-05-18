@@ -740,15 +740,14 @@ def request_register(email1 ,token):
 	if form1.validate_on_submit():
 		r1 = random.randrange(100000, 999999)
 		OTP.r = r1
-		account_sid = 'ACf6c4c0dc88c74c46eb7688882c8f6a25'
-		auth_token = '458aee4db31a7e3fe20f25877d3f7946'
+		account_sid = '<>'
+		auth_token = '<>'
 		client = Client(account_sid, auth_token)
 		OTP.phoneData = form1.phone.data
 
 		message = client.messages.create(
                               body='CoBuddy OTP is  '+str(r1)+'  ',
                               from_='+18622454115',
-                              # to='+918617739525'
                               to='+91'+str(form1.phone.data)
                           )
 
