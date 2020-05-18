@@ -1,0 +1,210 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 9, 2020, 12:04:22 AM
+    Author     : sayan
+*/
+body{
+    width: 100%;
+    height: 100%;
+   
+}
+
+.banner-image{
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: #f8f8f8;
+    background-size: cover;
+       
+}
+.inner-banner-img{
+    padding: 12%;
+    width: 80%;
+    margin: auto;
+}
+.banner-content{
+     position: relative;     
+     padding-top: 6%;    
+     padding-bottom: 2%;     
+     overflow:hidden;     
+     margin-bottom: 12%;     
+     background-color: rgba(0, 0, 0, 0.3);     
+     max-width: 660px; 
+    
+}
+/*
+.button{
+    color: ;
+    background-color: #c9302c;
+    border-color: #ac2925;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,125);
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 6px;
+}*/
+.button {
+  transition-duration: 0.4s;
+  background-color: white;
+   border: 1px solid blue;
+}
+
+.button:hover {
+  background-color: #d9534f; /* Green */
+  color: white;
+}
+h1:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.sl {
+  animation-duration: 3s;
+  animation-name: slidein;
+ // animation-iteration-count: infinite;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+/* abc*/
+
+.t{
+    font-weight:bold;
+    font-size: 10px;
+    color: red ;
+    position: absolute;
+    visibility: visible;
+    left: 150px;
+    top: 500px;
+    height: 100px;
+    width: 150px;
+    z-index: 200;
+        
+}
+.fea{
+    border: 2px solid red;
+    text-align: center;
+}
+.box{
+    height: 100px;
+    width: 360px;
+    border: 2px solid purple;
+    margin-left:  2%;
+    margin-top: 2%;
+    text-align: center;
+    
+}
+.w{
+    /*background-color: #afd9ee;*/
+    background-color: black;
+}
+.row{
+    /*padding-left: 3%;*/
+   /*margin-bottom: 2px;*/
+}
+
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+
+
+
+
+/* Make the image to responsive */
+.stackem div {
+    width: 100%;
+}
+
+
+
+
+
+.hvrbox,
+.hvrbox * {
+  box-sizing: border-box;
+}
+.hvrbox {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.hvrbox img {
+  max-width: 100%;
+}
+.hvrbox .hvrbox-layer_bottom {
+  display: block;
+}
+.hvrbox .hvrbox-layer_top {
+  opacity: 0;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  height: 80%;
+  background: rgba(69,100,100, 0.5);
+  /*background: #d9534f;*/
+  color: #fff;
+  padding: 15px;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+  opacity: 1;
+}
+.hvrbox .hvrbox-text {
+  text-align: center;
+  font-size: 30px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.hvrbox .hvrbox-text_mobile {
+  font-size: 15px;
+  border-top: 1px solid rgb(179, 179, 179); /* for old browsers */
+  border-top: 1px solid rgba(179, 179, 179, 0.7);
+  margin-top: 5px;
+  padding-top: 2px;
+  display: none;
+}
+.hvrbox.active .hvrbox-text_mobile {
+  display: block;
+}

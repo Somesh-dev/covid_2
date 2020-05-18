@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> bootstrap </title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+          <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+          <!-- <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet"> -->
+          <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700&display=swap" rel="stylesheet">
+
+        <!-- <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='cov-index.css')}}"> -->
+
+        <style>
+            
+                body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+   
+}
+
+.banner-image{
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: #f8f8f8;
+    background-size:cover;
+    background-position: center;
+    background:url( "{{ url_for('static', filename='we1.jpg') }}" );
+       
+}
+.inner-banner-img{
+    padding: 12%;
+    width: 80%;
+    margin: auto;
+}
+.banner-content{
+     position: relative;     
+     padding-top: 6%;    
+     padding-bottom: 2%;     
+     overflow:hidden;     
+     margin-bottom: 12%;     
+     background-color: rgba(0, 0, 0, 0.3);     
+     max-width: 660px; 
+    
+}
+/*
+.button{
+    color: ;
+    background-color: #c9302c;
+    border-color: #ac2925;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,125);
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 6px;
+}*/
+.button {
+  transition-duration: 0.4s;
+  background-color: white;
+   border: 1px solid blue;
+}
+
+.button:hover {
+  background-color: #93DFB8; /* Green */
+  color: white;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 4em; 
+}
+h1:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.sl {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: white;
+  animation-duration: 3s;
+  animation-name: slidein;
+ // animation-iteration-count: infinite;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+/* abc*/
+
+.t{
+    font-weight:bold;
+    font-size: 10px;
+    color: red ;
+    position: absolute;
+    visibility: visible;
+    left: 150px;
+    top: 500px;
+    height: 100px;
+    width: 150px;
+    z-index: 200;
+        
+}
+.fea{
+    border: 2px solid red;
+    text-align: center;
+}
+.box{
+    height: 100px;
+    width: 360px;
+    border: 2px solid purple;
+    margin-left:  2%;
+    margin-top: 2%;
+    text-align: center;
+    
+}
+.w{
+    /*background-color: #afd9ee;*/
+    background-color: black;
+}
+.row{
+    /*padding-left: 3%;*/
+   /*margin-bottom: 2px;*/
+}
+
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+
+
+
+
+/* Make the image to responsive */
+.stackem div {
+    width: 100%;
+}
+
+
+
+
+
+.hvrbox,
+.hvrbox * {
+  box-sizing: border-box;
+}
+.hvrbox {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.hvrbox img {
+  max-width: 100%;
+}
+.hvrbox .hvrbox-layer_bottom {
+  display: block;
+}
+.hvrbox .hvrbox-layer_top {
+  opacity: 0;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  height: 80%;
+  /*background: rgba(217,83,79, 0.5);*/
+    background: rgba(255,68,102, 0.5);
+  /*background: #d9534f;*/
+  color: #fff;
+  padding: 15px;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+  opacity: 1;
+}
+.hvrbox .hvrbox-text {
+  text-align: center;
+  font-size: 30px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.hvrbox .hvrbox-text_mobile {
+  font-size: 15px;
+  border-top: 1px solid rgb(179, 179, 179); /* for old browsers */
+  border-top: 1px solid rgba(179, 179, 179, 0.7);
+  margin-top: 5px;
+  padding-top: 2px;
+  display: none;
+}
+.hvrbox.active .hvrbox-text_mobile {
+  display: block;
+}
+
+
+b{
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+  font-size:20px;
+
+}
+        </style>
+
+    </head>
+    <body>
+
+
+        <div class="container">
+            <div class="row"> 
+                <div class="col-lg-12">
+                    <div class="banner-image">
+                        <center>
+                            <div class="inner-banner-img">
+                                <div class="banner-content">
+                                    <h1> CoBUDDY</h1><br>
+                                    <p class="sl ">LET'S not JOIN HANDS TO FIGHT TOGETHER</p><br>
+                                    <div class=" button btn  btn-lg active"> <a href="{{ url_for('hello_register')}} "><b>Register<br>Here</b></a></div> 
+
+                                </div>
+                            </div>
+                        </center>   
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container" style="background-color: #353839; width: 100%">
+            <div  style="margin-top: 3%; color: #ffffff">
+                <center><h2 ><b>FEATURES</b></h2></center>
+            </div>
+            <div class="row" style="margin: 3%;">
+                <div class=" ">
+                    <div class="col-lg-4  col-sm-6  " style="margin-bottom: 3%;">
+                        <div class ="hvrbox" style="margin-bottom: 10px">
+                            <img class="hvrbox-layer_bottom" src="{{url_for('static', filename='print.jpeg')}}" alt="hello" style="width: 90%;height:90%; border: 10"> 
+                            <a href=" ">  
+                                <div class="hvrbox-layer_top">
+                                    <div class="hvrbox-text">
+                                        <h3>AUTHENTIC NEWS UPDATE</h3>
+                                    </div>
+                                </div>
+                            </a>       
+                        </div>
+                    </div>
+                        <div class="col-lg-4  col-sm-6  " style="margin-bottom: 3%;">
+                        <div class ="hvrbox" style="margin-bottom: 10px">
+                            <img class="hvrbox-layer_bottom" src="{{url_for('static', filename='open.jpeg')}}" alt="hello" style="width: 90%;height:90%; border: 10"> 
+                            <a href=" ">  
+                                <div class="hvrbox-layer_top">
+                                    <div class="hvrbox-text">
+                                        <h3>STORE LOCATOR</h3>
+                                    </div>
+                                </div>
+                            </a>       
+                        </div>
+                    </div>
+                   
+                    <div class="col-lg-4  col-sm-6  " style="margin-bottom: 3%;">
+                        <div class ="hvrbox" style="margin-bottom: 10px">
+                            <img class="hvrbox-layer_bottom" src="{{url_for('static', filename='archi.jpeg')}}" alt="hello" style="width: 90%;height:90%; border: 10"> 
+                            <a href=" ">  
+                                <div class="hvrbox-layer_top">
+                                    <div class="hvrbox-text">
+                                        <h3>RISK ANALYSER</h3>
+                                    </div>
+                                </div>
+                            </a>       
+                        </div>
+                    </div>
+                    <div class="col-lg-4  col-sm-6  ">
+                        <div class ="hvrbox" style="margin-bottom: 10px">
+                            <img class="hvrbox-layer_bottom" src="{{url_for('static', filename='map.jpeg')}}" alt="hello" style="width: 90%;height:90%; border: 10"> 
+                            <a href=" ">  
+                                <div class="hvrbox-layer_top">
+                                    <div class="hvrbox-text">
+                                        <h3>COVID MAP</h3>
+                                    </div>
+                                </div>
+                            </a>       
+                        </div>
+                    </div>
+                    <div class="col-lg-4  col-sm-6  ">
+                        <div class ="hvrbox" style="margin-bottom: 10px">
+                            <img class="hvrbox-layer_bottom" src="{{url_for('static', filename='desk.jpeg')}}" alt="hello" style="width: 90%;height:90%; border: 10"> 
+                            <a href=" ">  
+                                <div class="hvrbox-layer_top">
+                                    <div class="hvrbox-text">
+                                        <h3>INTELLIGENT DEVICES</h3>
+                                    </div>
+                                </div>
+                            </a>       
+                        </div>
+                    </div>
+                    <div class="col-lg-4  col-sm-6  ">
+                        <div class ="hvrbox" style="margin-bottom: 10px">
+                            <img class="hvrbox-layer_bottom" src="{{url_for('static', filename='qr.jpeg')}}" alt="hello" style="width: 90%;height:90%; border: 10"> 
+                            <a href=" ">  
+                                <div class="hvrbox-layer_top">
+                                    <div class="hvrbox-text">
+                                        <h3>UNIQUE QR FEATURE</h3>
+                                    </div>
+                                </div>
+                            </a>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    </body>
+</html>

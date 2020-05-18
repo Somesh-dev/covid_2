@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+	<title> Team Page </title>
+	<!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+	    <script src="https://kit.fontawesome.com/6dc87e4aa4.js" crossorigin="anonymous"></script>
+
+        
+        <style type="text/css">
+
+            body {
+             /* background: #F1C40F;*/
+	          margin: 0;
+	          margin-top: 1.5%; 
+	          padding: 3%;
+	          font-family: 'Josefin Sans', sans-serif;
+	          background-color: #353839; 
+	          width: 100%;
+
+            }
+
+            .padding-0{
+    			padding-right:0;
+    			padding-left:0;
+					}
+
+            .card {
+	          
+	           position: relative;
+	           width: 300px;
+	           height: 400px;
+	           transform-style: preserve-3d;
+	           perspective: 600px;
+	           transition: 0.5s;
+	           margin: 20px;
+            }
+            .card .front {
+	           position: absolute;
+	           top: 0;
+	           left: 0;
+	           width: 100%;
+	           height: 100%;
+	           background: #000;
+	           backface-visibility: hidden;
+	           transform: rotateX(0deg);
+               transition: 0.5s;
+            }
+            .card:hover .front {
+            	transform: rotateX(-180deg);
+            }
+            .card .back {
+	           position: absolute;
+	           top: 0;
+	           left: 0;
+	           width: 100%;
+	           height: 100%;
+	           background: #000;
+	           backface-visibility: hidden;
+	           transform: rotateX(180deg);
+               transition: 0.5s;
+
+            }
+            .card .back:before {
+	           content: '';
+	           position: absolute;
+	           top: 0;
+	           left: -50%;
+	           width: 100%;
+	           height: 100%;
+	           background: rgba(255,255,255,0.1);
+            }           
+            .card:hover .back {
+               transform: rotateX(0deg);
+            }
+            .card .back .details {
+                position: absolute;
+                top: 50%;
+                transform: translateZ(-50%);
+                left: 0;
+                width: 100%;
+                text-align: center;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            .card .back .details h2{
+            	margin-bottom: 0;
+            	padding: 0;
+            	font-size: 24px;
+            	color: #fff;
+            }
+            .card .back .details h2 span {
+            	color: #a7a7a7;
+            	font-size: 16px;
+            }
+            .social-icons{
+            	padding: 10px 0;
+            }
+            .social-icons a{
+            	display: inline-block;
+            	width: 36px;
+            	height: 36px;
+            	text-align: center;
+            	background: #262626;
+            	color: #fff;
+            	text-decoration: none;
+            	border-radius: 50%;
+            	transition: 0.5s;
+            }
+            .social-icons a .fa{
+            	line-height: 36px;
+            }
+            .social-icons a:hover {
+            	background:#e91e63;
+            }
+
+
+        </style>
+
+
+</head>
+
+
+<body>
+	<div>
+        <h1 class="logo-text" style="padding: 0; margin:0; font-family: 'Josefin Sans', sans-serif; text-align:center; color:#515A5A; color: white; font-size:3em"> Team @ S4 </h1>
+        <hr>
+        <br>
+
+	</div>
+	<div class="container" style="padding: 0; margin:0; width: 100%">
+
+	    <div class="row" style="margin: 0.5%; border-left:1px solid white ;border-right: 1px solid white ">
+
+                <div class=" ">
+
+                    <div class="col-lg-3 col-md-3 col-sm-3  col-xs-12 padding-0">
+                    	<div class="card">
+		<div class="front"><img width="300"src="{{ url_for('static', filename='sayan1.jpg')}}"></div>
+		<div class="back">
+			<div class="details">
+			<h2>Sayan Dey<br><span>CSE Student</span></h2>
+			<div class="social-icons">
+				<a href="https://www.facebook.com/photo/?fbid=1024777227914038&set=a.100830553642048"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+				<a href="https://instagram.com/sayandeyofficial?igshid=o5es6kpb1hm5"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				<a href="https://www.linkedin.com/in/sayan-dey-986452190"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+
+			</div>
+			</div>
+
+		</div>
+		</div>
+                    </div>
+
+                    <!-- <div class="col-lg-2 " style="margin-bottom: 3%;background-color: red; "></div> -->
+                    <div class="col-lg-3 col-md-3 col-sm-3  col-xs-12 padding-0" >
+                    	<div class="card">
+		<div class="front"><img width="300" src="{{ url_for('static', filename='sayani.jpg')}}"></div>
+		<div class="back">
+			<div class="details">
+			<h2>Sayani Biswas<br><span>CSE Student</span></h2>
+			<div class="social-icons">
+				<a href="https://www.facebook.com/profile.php?id=100009876851659"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+				<a href="https://instagram.com/sayani_biswas?igshid=x5cjkc2a7oj2"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				<a href="https://www.linkedin.com/in/sayani-biswas-4a07a316a"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+
+			</div>
+			</div>
+		</div>
+	</div>
+
+
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-3 col-sm-3  col-xs-12 padding-0" >
+                    	<div class="card">
+		<div class="front"><img width="300"src="{{ url_for('static', filename='shubha.jpg')}}"></div>
+		<div class="back">
+			<div class="details">
+			<h2>Shubhamoy Sarkar<br><span>CSE Student</span></h2>
+			<div class="social-icons">
+				<a href="https://www.facebook.com/shubhamoy.sarkar.3/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+				<a href="https://instagram.com/shubhamoy_sarkar.26?igshid=k2tcmongubfw"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				<a href="https://www.linkedin.com/in/shubhamoy-sarkar-79987b18b"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+
+			</div>
+			</div>
+		</div>
+	</div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-3 col-sm-3  col-xs-12 padding-0" >
+                    	<div class="card">
+		<div class="front"><img width="300"src="{{ url_for('static', filename='somesh.jpg')}}"></div>
+		<div class="back">
+			<div class="details">
+			<h2>Somesh Sarkar<br><span>CSE Student</span></h2>
+			<div class="social-icons">
+				<a href="https://www.facebook.com/samir.saha.13"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				<a href="https://www.linkedin.com/in/somesh-sarkar-a09138174"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+
+			</div>
+			</div>
+		</div>
+	</div>
+                    </div>
+
+                      
+                
+        </div>
+
+       <!--  <div class="row" style="margin: 3%;">
+     
+         
+
+        </div> -->
+
+    </div>
+    <br>
+    <hr>
+</body>
+</html>

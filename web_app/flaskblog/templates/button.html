@@ -1,0 +1,288 @@
+<html>
+<head>
+	<title>IOT_BUTTON</title>
+
+<!-- 	<link rel="stylesheet" type="text/css" href="button_1.css">
+ -->	
+ <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
+
+<!-- 
+ <link rel= "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" > -->
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+    <script src="https://kit.fontawesome.com/6dc87e4aa4.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
+	<style>
+		.abcd {
+    font-family: 'Changa', sans-serif;
+    position: relative;
+    top: 10px;
+    left: 5px;
+    font-size: 40;
+    color: #008080;
+    display: block;
+
+  
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+
+  transform: translate(-50%,-50%);
+  
+  display: inline-block;
+  width: 120px;
+  height: 60px;
+  }
+
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  
+  content: "";
+  position: absolute;
+  height: 54px;
+  width: 54px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #FF007C;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 12px  #CC0000;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(58px);
+  -ms-transform: translateX(58px);
+  transform: translateX(58px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+.efgh {
+    font-family: 'Changa', sans-serif;
+    position: relative;
+    top: 10px;
+    left: -25px;
+    font-size: 40;
+    color: #FFAA1D;
+    display: block;
+   } 
+
+/* The switch - the box around the slider */
+.switch1 {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+
+  transform: translate(-50%,-50%);
+  
+  display: inline-block;
+  width: 120px;
+  height: 60px;
+  
+}
+
+/* Hide default HTML checkbox */
+.switch1 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider1 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider1:before {
+  
+  content: '';
+  color: #800080;
+  position: absolute;
+  height: 54px;
+  width: 54px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider1 {
+  background-color: #00CCCC;
+}
+
+input:focus + .slider1 {
+  box-shadow: 0 0 14px  #4997D0;
+}
+
+input:checked + .slider1:before {
+  -webkit-transform: translateX(58px);
+  -ms-transform: translateX(58px);
+  transform: translateX(58px);
+}
+
+/* Rounded sliders */
+.slider1.round1 {
+  border-radius: 34px;
+}
+
+.slider1.round1:before {
+  border-radius: 50%;
+}
+	</style>
+
+	
+
+</head>
+<body style="border:70px solid #d9534f">
+
+<!-- Rounded switch -->
+<center><h1 class="abcd" style="color:#d9534f ">DISPENSER ACTIVATOR</h1></center>
+<label  class="switch">
+  <p class="abcd">ACTIVATOR</p>
+  <input type="checkbox" id="switch_1" onclick="change(this)">
+  <span class="slider round"></span>
+</label>
+
+
+<!-- Rounded switch -->
+
+<label class="switch1" style="margin-left: 10%;">
+  <p class="efgh" style="margin-left: 20%;">NoUse</p>
+  <input type="checkbox" id="switch_2" onClick="change2(this)">
+  <span class="slider1 round1"></span>
+</label>
+
+	<script  type="text/JavaScript"> 
+  
+  function change() {
+      var decider = document.getElementById('switch_1');
+
+  if(decider.checked){
+
+    var movies = {"s1": 1, "d1": 1 }
+
+    const options ={
+    method : 'POST',
+    headers:{
+        'Content-Type':'application/json'
+    },
+    body: JSON.stringify(movies)
+    };
+    fetch('/trig/$2b$12$REupXSg6FIxMob4eZQYevu5E7QQgyHEE4QSwkcNlYhxiygPSrjD9G', options);
+
+    alert('Triggering is started. To stop please off the button.')
+  }else{
+    var movies = {"s1": 0, "d1": 0 }
+
+    const options ={
+    method : 'POST',
+    headers:{
+        'Content-Type':'application/json'
+    },
+    body: JSON.stringify(movies)
+    };
+    fetch('/trig/$2b$12$REupXSg6FIxMob4eZQYevu5E7QQgyHEE4QSwkcNlYhxiygPSrjD9G', options);
+
+    alert('Triggering is stopped.')
+  }
+  return true;
+}
+
+
+function change2() {
+      var decider = document.getElementById('switch_2');
+
+  if(decider.checked){
+
+    var movies = {"s1": 1, "d1": 1 }
+
+    const options ={
+    method : 'POST',
+    headers:{
+        'Content-Type':'application/json'
+    },
+    body: JSON.stringify(movies)
+    };
+    // fetch('/trig/$2b$12$REupXSg6FIxMob4eZQYevu5E7QQgyHEE4QSwkcNlYhxiygPSrjD9G', options);
+
+    alert('Button is for future upgradation.')
+  }else{
+    var movies = {"s1": 0, "d1": 0 }
+
+    const options ={
+    method : 'POST',
+    headers:{
+        'Content-Type':'application/json'
+    },
+    body: JSON.stringify(movies)
+    };
+    // fetch('/trig/$2b$12$REupXSg6FIxMob4eZQYevu5E7QQgyHEE4QSwkcNlYhxiygPSrjD9G', options);
+
+    alert('Button is for future upgradation.')
+  }
+  return true;
+}
+</script>
+
+</body>
+
+</html>
