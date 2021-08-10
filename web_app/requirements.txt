@@ -22,10 +22,3 @@ SQLAlchemy==1.3.16
 urllib3==1.25.8
 Werkzeug==1.0.0
 WTForms==2.3.1
-
-Provided Certificates: HackOn_GoogleAssistantAction, GirlScript_Android, IBM Master The Mainframe, RoboticsCompetion_IIT_Kharagpur, BharaAcharyaEducatio_Online Course_COA, CCA_Java_Qualification, MIET_Meerut_DataScience_webinar, LearnWithCommunity_DecisionTrees, 
-Juno_Arduino_3rd_position, Kshitij_2020_participation, MLH_HackDay_UEM, NEO_CA_Internship, Personal Branding by Miri Rodriguez, 
-RoboCian_Donation_COVID, Swift Coimbatore_SwiftUI, TechEnquiesta_3rd_position, Udemy_JCL, Internal Certicates of TechStorm, Theme Photography  
-
-Pending Certificates: IDEAThon , Abhiyantra    
-
